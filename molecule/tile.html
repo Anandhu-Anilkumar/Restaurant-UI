@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tile</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <div class="re-tile">
+        <div class="re-tile__image">
+            <img class="re-tile__img" src="../assets/images/item-1.png" alt="Summer Salad">
+        </div>
+        <div class="re-tile__content">
+            <h3 class="re-sub-heading">Summer Salad</h3>
+            <div class="re-tile__rating">3</div>
+            <p class="re-tile__price">1.25</p>
+            <button class="re-cart">
+                <span class="re-cart__icon"></span>
+                <span class="re-cart__text">Add to cart</span>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        let starRating = document.getElementsByClassName("re-tile__rating");
+        let starCount = starRating[0].textContent;
+        starRating[0].textContent = "";
+
+        for (let index = 0; index < 5; index++) {
+            const star = document.createElement("img");
+            star.classList.add("re-tile__star");
+            star.alt = "Star";
+            star.src = index < starCount ? "../assets/icons/star-yellow.svg" : "../assets/icons/star-grey.svg";
+            starRating[0].appendChild(star);
+        }
+    </script>
+</body>
+
+</html>

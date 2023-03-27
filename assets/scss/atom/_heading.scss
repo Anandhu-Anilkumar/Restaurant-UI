@@ -1,0 +1,15 @@
+.re-heading {
+    font-size: 24px;
+    font-weight: $font-bold;
+    text-align: center;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 30px;
+        background-image: url("../icons/section-heading.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}

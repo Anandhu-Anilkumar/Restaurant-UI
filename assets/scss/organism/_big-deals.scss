@@ -1,0 +1,39 @@
+.re-big-deals {
+    background: linear-gradient($color-black-2, $color-black-2), url("../images/big-deals.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: $color-white;
+    padding: $spacer-5 0;
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: $spacer-3;
+        padding: $spacer-3 0 0 0;
+    }
+
+    &__item {
+        background-color: $color-orange;
+        border-radius: 5px;
+        padding: $spacer-5 $spacer-3;
+        text-align: center;
+        width: 150px;
+    }
+
+    &__number {
+        font-size: 35px;
+        font-weight: $font-medium;
+    }
+}
+
+@include desktop {
+
+    .re-big-deals {
+
+        &__wrapper {
+            gap: $spacer-5;
+        }
+    }
+}

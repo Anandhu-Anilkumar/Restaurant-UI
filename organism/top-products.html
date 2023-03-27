@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <div class="re-top-products">
+        <div class="re-content-wrapper">
+            <h2 class="re-heading">Top products</h2>
+            <div class="re-top-products__wrapper">
+                <div class="re-tile">
+                    <div class="re-tile__image">
+                        <img class="re-tile__img" src="../assets/images/item-1.png" alt="Russian Salad">
+                    </div>
+                    <div class="re-tile__content">
+                        <h3 class="re-sub-heading">Russian Salad</h3>
+                        <div class="re-tile__rating">3</div>
+                        <p class="re-tile__price">1.25</p>
+                    </div>
+                </div>
+                <div class="re-tile">
+                    <div class="re-tile__image">
+                        <img class="re-tile__img" src="../assets/images/item-2.png" alt="Greek Salad">
+                    </div>
+                    <div class="re-tile__content">
+                        <h3 class="re-sub-heading">Greek Salad</h3>
+                        <div class="re-tile__rating">5</div>
+                        <p class="re-tile__price">1.75</p>
+                    </div>
+                </div>
+                <div class="re-tile">
+                    <div class="re-tile__image">
+                        <img class="re-tile__img" src="../assets/images/item-1.png" alt="Cottage pie">
+                    </div>
+                    <div class="re-tile__content">
+                        <h3 class="re-sub-heading">Cottage pie</h3>
+                        <div class="re-tile__rating">4</div>
+                        <p class="re-tile__price">1.25</p>
+                    </div>
+                </div>
+                <div class="re-tile">
+                    <div class="re-tile__image">
+                        <img class="re-tile__img" src="../assets/images/item-2.png" alt="Summer Salad">
+                    </div>
+                    <div class="re-tile__content">
+                        <h3 class="re-sub-heading">Summer Salad</h3>
+                        <div class="re-tile__rating">2</div>
+                        <p class="re-tile__price">1.2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="re-cta">
+                <a class="re-btn" href="#" title="View More">View More</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.re-top-products__wrapper').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                arrows: true,
+                speed: 1000,
+                responsive: [
+                    {
+                        breakpoint: 1023.8,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    },
+                ]
+            });
+        });
+
+        let starRating = document.getElementsByClassName("re-tile__rating");
+        console.log(starRating);
+        let starCount;
+
+        for (let index = 0; index < starRating.length; index++) {
+            starCount = starRating[index].textContent;
+            starRating[index].textContent = "";
+
+            for (let i = 0; i < 5; i++) {
+                const star = document.createElement("img");
+                star.classList.add("re-tile__star");
+                star.src = i < starCount ? "../assets/icons/star-yellow.svg" : "../assets/icons/star-grey.svg";
+                star.alt = "Star";
+                starRating[index].appendChild(star);
+            }
+        }
+    </script>
+</body>
+
+</html>

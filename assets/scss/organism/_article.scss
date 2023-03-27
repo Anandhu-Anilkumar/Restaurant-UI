@@ -1,0 +1,51 @@
+.re-article {
+    padding: $spacer-5 0;
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: $spacer-5;
+    }
+
+    .re-description {
+        padding: $spacer-3 0;
+    }
+}
+
+@include desktop {
+
+    .re-article {
+
+        &__image {
+            width: 550px;
+        }
+
+        &__content {
+            width: calc(100% - 582px);
+        }
+
+        .re-description {
+            padding: $spacer-5 0;
+        }
+    }
+}
+
+@include tablet {
+
+    .re-article {
+
+        &__wrapper {
+            padding: $spacer-3 0 0 0;
+        }
+
+        &__image {
+            width: 40%;
+        }
+
+        &__content {
+            width: calc(60% - 32px);
+        }
+    }
+
+}

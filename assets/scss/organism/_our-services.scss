@@ -1,0 +1,38 @@
+.re-our-services {
+    background-color: $color-white-1;
+    padding: $spacer-5 0;
+
+    .re-heading {
+        padding: 0 0 $spacer-6 0;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $spacer-5;
+        padding: $spacer-3 0 0 0;
+    }
+
+    .re-service {
+        margin: 0 0 $spacer-5 0;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+}
+
+@include desktop {
+
+    .re-our-services {
+
+        &__wrapper {
+            padding: $spacer-6 0 0 0;
+        }
+
+        .re-service {
+            width: calc(100%/3 - 24px);
+            margin: 0;
+        }
+    }
+}

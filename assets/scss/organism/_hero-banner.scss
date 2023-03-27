@@ -1,0 +1,62 @@
+.re-banner {
+    background-image: url("../images/hero-banner-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: $spacer-5 0;
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: $spacer-3;
+    }
+
+    &__summary {
+        display: flex;
+        align-items: center;
+    }
+
+    &__summary-text {
+        font-size: 20px;
+        font-weight: $font-medium;
+    }
+
+    &__promo-img {
+        width: 120px;
+        margin: 0 0 0 $spacer-2;
+    }
+
+    &__title {
+        font-size: 38px;
+        font-weight: $font-bold;
+        padding: $spacer-3 0;
+    }
+
+    &__promo {
+        color: $color-orange;
+    }
+
+    &__desc {
+        padding: 0 0 $spacer-3 0;
+    }
+
+    &__image {
+        max-width: 400px;
+    }
+}
+
+
+@include desktop {
+
+    .re-banner {
+    
+        &__content {
+            width: calc(100% - 416px);
+        }
+
+        &__desc {
+            width: 90%;
+        }
+    }
+}

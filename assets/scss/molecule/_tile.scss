@@ -1,0 +1,50 @@
+.re-tile {
+    background-color: $color-white;
+
+    &__image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: $spacer-3;
+    }
+
+    &__img {
+        max-width: 250px;
+    }
+
+    &__content {
+        padding: $spacer-3;
+        border-top: 2px solid $color-white-1;
+    }
+
+    .re-sub-heading {
+        text-align: center;
+    }
+
+    &__rating {
+        display: flex;
+        justify-content: center;
+        padding: $spacer-2 0;
+    }
+
+    &__star {
+        width: 14px;
+    }
+
+    &__price {
+        font-size: 14px;
+        color: $color-red;
+        font-weight: $font-medium;
+        text-align: center;
+        padding: 0 0 $spacer-3 0;
+
+        &::before {
+            content: '$';
+            padding: 0 $spacer-1 0 0;
+        }
+    }
+    .re-cart {
+        text-align: center;
+        margin: 0 auto;
+    }
+}

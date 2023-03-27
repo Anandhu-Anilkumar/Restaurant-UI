@@ -1,0 +1,66 @@
+.re-top-products {
+    padding: $spacer-5 0;
+    background-color: $color-white-1;
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        padding: $spacer-3;
+        width: calc(100% - 32px);
+        margin: $spacer-3 auto;
+    }
+
+    .re-tile {
+        margin: 0 $spacer-3;
+    }
+
+    .slick-prev,
+    .slick-next {
+        z-index: 1;
+
+        &::before {
+            background-color: $color-orange;
+            border: 1px solid $color-orange;
+            border-radius: 5px;
+            color: $color-white;
+            font-size: 35px;
+            padding: 0 $spacer-2;
+            font-family: 'Poppins', sans-serif;
+        }
+    }
+
+    .slick-prev {
+        left: (-$spacer-3);
+
+        &::before {
+            content: '<';
+        }
+    }
+
+    .slick-next {
+        right: 0;
+
+        &::before {
+            content: '>';
+        }
+    }
+
+    .re-cta {
+        justify-content: center;
+    }
+}
+
+
+@include desktop {
+
+    .re-top-products {
+
+        .slick-prev {
+            left: (-$spacer-5);
+        }
+
+        .slick-next {
+            right: (-$spacer-3);
+        }
+    }
+}
