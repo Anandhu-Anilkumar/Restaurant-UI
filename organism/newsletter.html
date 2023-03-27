@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <div class="re-newsletter">
+        <div class="re-content-wrapper">
+            <div class="re-newsletter__wrapper">
+                <img class="re-newsletter__image" src="../assets/images/newsletter.png" alt="Newsletter">
+                <div class="re-newsletter__content">
+                    <h3 class="re-sub-heading">Subscribe to your newsletter</h3>
+                    <p class="re-description">Lorem Ipsum as their default model text, and a search for 'lorem ipsum'
+                        will uncover many web sites still in their infancy.</p>
+                    <div class="re-newsletter__email-wrapper">
+                        <input class="re-newsletter__email" type="email" placeholder="email@freshmeal.com"
+                            name="re-email" id="re-email" required>
+                        <button class="re-newsletter__btn" type="submit" disabled>Subscribe</button>
+                    </div>
+                    <div class="re-newsletter__success">
+                        <p class="re-newsletter__message">You have successfully subscribed to the newsletter!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let mailInputField = document.getElementsByClassName("re-newsletter__email-wrapper");
+        let mailAddress = document.getElementById("re-email");
+        let mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        let newsletterSubmit = document.getElementsByClassName("re-newsletter__btn");
+        let newsletterSuccess = document.getElementsByClassName("re-newsletter__success");
+
+        mailAddress.addEventListener("input", function () {
+            
+            if (mailAddress.value.match(mailFormat)) {
+                mailInputField[0].style.border = "none";
+                newsletterSubmit[0].removeAttribute("disabled");
+                newsletterSubmit[0].style.opacity = "1";
+            } else {
+                mailInputField[0].style.border = "2px solid red";
+            }
+        });
+
+        newsletterSubmit[0].addEventListener("click", function () {
+            newsletterSuccess[0].style.display = "block";
+        });
+    </script>
+
+</body>
+
+</html>

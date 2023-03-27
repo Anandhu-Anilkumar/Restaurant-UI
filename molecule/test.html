@@ -1,39 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
+    <title>Email Validation Example</title>
+    <!-- <link rel="stylesheet" href="../assets/css/style.css"> -->
+    <style>input{border: 5px solid blue}</style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#email').on('input', function () {
+                var email = $(this).val();
+                var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+                if (!emailRegex.test(email)) {
+                    $(this).css('border-color', 'red');
+                } else {
+                    $(this).css('border-color', 'green');
+                }
+            });
+        });
+    </script>
 </head>
-<style>
-    .re-cart {
-        background-color: #eebf00;
-        border: 1px solid #eebf00;
-        border-radius: 5px;
-        color: #fff;
-        font-size: 16px;
-        cursor: pointer;
-        padding: 8px 16px
-    }
 
-    .re-cart__add {
-        width: 13px;
-        height: 11px;
-        display: inline-block;
-        background-image: url("../assets/icons/cart-2.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover
-    }
-</style>
-
-<body style="padding: 40px;background-color: lightblue;">
-    <button class="re-cart">
-        <span class="re-cart__icon"></span>
-        <span class="re-cart__text">Add to cart</span>
-    </button>
+<body>
+    <form>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <input type="submit" value="Submit">
+    </form>
 </body>
 
 </html>

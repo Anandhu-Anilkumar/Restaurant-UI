@@ -1,0 +1,114 @@
+.re-newsletter {
+    background-color: $color-orange;
+    padding: $spacer-5 0;
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $spacer-3;
+    }
+
+    .re-sub-heading {
+        font-size: 24px;
+    }
+
+    .re-description {
+        font-weight: $font-regular;
+        padding: $spacer-4 0;
+    }
+
+    &__email-wrapper {
+        background-color: $color-white;
+        padding: $spacer-1 $spacer-1 $spacer-1 $spacer-3;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__email {
+        font-size: 16px;
+        padding: $spacer-3 $spacer-3 $spacer-3 0;
+        width: calc(100% - 120px);
+
+        &::placeholder {
+            color: $color-grey;
+        }
+    }
+
+    &__btn {
+        background-color: $color-orange;
+        color: $color-white;
+        font-size: 16px;
+        padding: $spacer-3 $spacer-4;
+        border-radius: 5px;
+        transition: 0.3s;
+        cursor: pointer;
+        opacity: 0.6;
+
+        &:hover {
+            background-color: $color-black-1;
+        }
+    }
+
+    &__success {
+        background-color: $color-white;
+        margin: $spacer-3 0 0 0;
+        padding: $spacer-2;
+        display: none;
+    }
+
+    &__message {
+        font-size: 14px;
+        font-weight: $font-bold;
+
+        &::before {
+            content: '✓';
+            color: $color-white;
+            background-color: $color-green;
+            border-radius: 50%;
+            padding: $spacer-1 $spacer-2;
+            margin: 0 $spacer-2 0 0;
+            font-size: 18px;
+        }
+    }
+}
+
+@include desktop {
+
+    .re-newsletter {
+
+        &__wrapper {
+            gap: $spacer-5;
+        }
+
+        &__image {
+            width: 500px;
+        }
+    
+        &__content {
+            width: calc(100% - 532px);
+            padding: $spacer-6 0 0 0;
+        }
+    }
+}
+
+
+@include tablet {
+
+    .re-newsletter {
+
+        &__wrapper {
+            align-items: center;
+        }
+
+        &__image {
+            width: 330px;
+        }
+    
+        &__content {
+            width: calc(100% - 362px);
+            padding: 0;
+        }
+    }
+
+}

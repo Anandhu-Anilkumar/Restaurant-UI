@@ -53,8 +53,31 @@ for (let index = 0; index < services.length; index++) {
     }
 }
 
-if (services.length > 3 && window.innerWidth>600) { // to avoid overlapping for services except first row
+if (services.length > 3 && window.innerWidth > 600) { // to avoid overlapping for services except first row
     for (let index = 3; index < services.length; index++) {
         services[index].style.marginTop = "40px";
     }
 }
+
+
+// Subscribe to newsletter
+let mailInputField = document.getElementsByClassName("re-newsletter__email-wrapper");
+let mailAddress = document.getElementById("re-email");
+let mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+let newsletterSubmit = document.getElementsByClassName("re-newsletter__btn");
+let newsletterSuccess = document.getElementsByClassName("re-newsletter__success");
+
+mailAddress.addEventListener("input", function () {
+
+    if (mailAddress.value.match(mailFormat)) {
+        mailInputField[0].style.border = "none";
+        newsletterSubmit[0].removeAttribute("disabled");
+        newsletterSubmit[0].style.opacity = "1";
+    } else {
+        mailInputField[0].style.border = "2px solid red";
+    }
+});
+
+newsletterSubmit[0].addEventListener("click", function () {
+    newsletterSuccess[0].style.display = "block";
+});
