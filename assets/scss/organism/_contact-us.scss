@@ -1,0 +1,86 @@
+.re-contact-us {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacer-5;
+
+    &__content {
+        padding: $spacer-5 0;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: $spacer-3;
+        padding: $spacer-3 0 0 0;
+    }
+
+    &__icon {
+        width: 50px;
+        height: 50px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: url("../icons/bag-2.svg");
+
+        &:first-child {
+            background-image: url("../icons/phone-2.svg");
+        }
+        
+        &:nth-last-child(2) {
+            background-image: url("../icons/clock-2.svg");
+        }
+    }
+
+    &__text {
+        width: calc(100% - 66px);
+    }
+
+    &__summary {
+        display: block;
+        font-weight: $font-bold;
+        padding: 0 0 $spacer-1 0;
+    }
+
+    &__map {
+        width: 100%;
+    }
+}
+
+
+@include desktop {
+
+    .re-contact-us {
+
+        &__content {
+            width: calc(50% - 16px);
+        }
+
+        &__wrapper {
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        &__map {
+            width: calc(50% - 16px);
+        }
+
+    }
+}
+
+
+@include tablet {
+
+    .re-contact-us {
+
+        &__wrapper {
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: $spacer-3;
+            padding: $spacer-3 0 0 0;
+            margin: 0;
+        }
+    }
+}

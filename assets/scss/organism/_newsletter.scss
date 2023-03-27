@@ -82,11 +82,11 @@
         }
 
         &__image {
-            width: 500px;
+            max-width: calc(50% - 16px);
         }
     
         &__content {
-            width: calc(100% - 532px);
+            width: calc(50% - 16px);
             padding: $spacer-6 0 0 0;
         }
     }
@@ -96,19 +96,9 @@
 @include tablet {
 
     .re-newsletter {
-
-        &__wrapper {
-            align-items: center;
-        }
-
-        &__image {
-            width: 330px;
-        }
     
         &__content {
-            width: calc(100% - 362px);
             padding: 0;
         }
     }
-
 }
