@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <nav class="re-nav navbar navbar-expand-md fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img class="re-nav__logo" src="../assets/icons/logo.svg" alt="FreshMeal Shop">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">External Link 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">External Link 2</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    <button class="btn btn-outline-secondary ms-3">Button</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div style="width: 100%;height: 300px;background-color: darkblue;"></div>
+    <div style="width: 100%;height: 300px;background-color: yellow;"></div>
+    <div style="width: 100%;height: 300px;background-color: green;"></div>
+    <div style="width: 100%;height: 300px;background-color: #3f0000;"></div>
+    <div style="width: 100%;height: 300px;background-color: cyan;"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
+    <script>
+        let navigation = document.querySelector('.re-nav');
+        var myNavbar = document.getElementById('navbarNav');
+        var myNavToggler = document.querySelector('.navbar-toggler');
+        myNavToggler.addEventListener('click', function () {
+            if (myNavbar.offsetHeight > 0) {
+                navigation.classList.remove('re-nav--expand');
+            } else {
+                navigation.classList.add('re-nav--expand');
+            }
+        });
+    </script>
+</body>
+
+</html>

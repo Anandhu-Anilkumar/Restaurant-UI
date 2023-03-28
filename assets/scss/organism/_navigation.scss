@@ -1,0 +1,11 @@
+.re-nav {
+    background-color: $color-white;
+
+    &--expand {
+        background-color: $color-white-1;
+    }
+
+    &__logo {
+        width: 150px;
+    }
+}
