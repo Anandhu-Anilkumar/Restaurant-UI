@@ -1,7 +1,58 @@
 .re-footer {
-    background-color: $color-black-1;
+    background-color: $color-black-4;
 
     .container-fluid {
         max-width: 1200px;
+        padding: 0 calc(var(--bs-gutter-x) * 2/3);
+    }
+
+    &__heading {
+        font-weight: $font-medium;
+        font-size: 18px;
+        line-height: 1.5;
+        padding: 0 0 $spacer-2 0;
+        border-bottom: 1px solid $color-orange;
+    }
+
+    &__text {
+        font-size: 14px;
+    }
+
+    .btn {
+        --bs-btn-color: #fff;
+        --bs-btn-bg: #232b38;
+        --bs-btn-font-size: 1rem;
+        --bs-btn-border-color: #232b38;
+        --bs-btn-hover-color: #232b38;
+        --bs-btn-hover-bg: #fff;
+    }
+
+    &__link {
+        font-size: 14px;
+        color: $color-white;
+
+        &:hover {
+            color: $color-orange;
+        }
+    }
+
+    &__copyright {
+        background-color: $color-black-3;
+        font-size: 14px;
+        font-weight: $font-light;
+
+        &--owner {
+            color: $color-orange;
+        }
+    }
+}
+
+@include desktop {
+
+    .re-footer {
+    
+        .container-fluid {
+            padding: 0 calc(var(--bs-gutter-x) * 4/3);
+        }
     }
 }
