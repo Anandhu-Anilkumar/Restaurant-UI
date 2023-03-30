@@ -1,3 +1,38 @@
+// Navigation
+let navigation = document.querySelector('.re-header__nav');
+var myNavbar = document.getElementById('navbarNav');
+var myNavToggler = document.querySelector('.navbar-toggler');
+let navLinks = document.getElementsByClassName('nav-link');
+
+myNavToggler.addEventListener('click', function () {
+    if (myNavbar.offsetHeight > 0) {
+        navigation.classList.remove('re-header__nav--expand');
+    } else {
+        navigation.classList.add('re-header__nav--expand');
+    }
+});
+
+for (let index = 0; index < navLinks.length; index++) {
+
+    navLinks[index].addEventListener('click', function () {
+        for (let i = 0; i < navLinks.length; i++) {
+            navLinks[i].classList.remove('active');
+            navLinks[i].style.backgroundColor = 'transparent';
+        }
+        navLinks[index].classList.add('active');
+        navLinks[index].style.backgroundColor = '#eebf00';
+    });
+}
+
+window.addEventListener("scroll", function () {
+    if (window.scrollY > 30) {
+        navigation.classList.add('fixed-top');
+    } else {
+        navigation.classList.remove('fixed-top');
+    }
+});
+
+
 // Top products - slider
 $(document).ready(function () {
     $('.re-top-products__wrapper').slick({

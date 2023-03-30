@@ -5,6 +5,7 @@
     &__wrapper {
         display: flex;
         flex-wrap: wrap;
+        align-items: center;
         gap: $spacer-3;
     }
 
@@ -28,7 +29,7 @@
     &__email {
         font-size: 16px;
         padding: $spacer-3 $spacer-3 $spacer-3 0;
-        width: calc(100% - 120px);
+        width: calc(100% - 130px);
 
         &::placeholder {
             color: $color-grey;

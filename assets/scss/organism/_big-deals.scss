@@ -19,7 +19,7 @@
         border-radius: 5px;
         padding: $spacer-5 $spacer-3;
         text-align: center;
-        width: 150px;
+        width: calc(50% - 8px);
     }
 
     &__number {
@@ -34,6 +34,10 @@
 
         &__wrapper {
             gap: $spacer-5;
+        }
+
+        &__item {
+            width: 150px;
         }
     }
 }
