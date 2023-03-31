@@ -21,14 +21,14 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        background-image: url("../icons/bag-2.svg");
+        background-image: url("../icons/bag.svg");
 
         &:first-child {
-            background-image: url("../icons/phone-2.svg");
+            background-image: url("../icons/phone.svg");
         }
         
         &:nth-last-child(2) {
-            background-image: url("../icons/clock-2.svg");
+            background-image: url("../icons/clock.svg");
         }
     }
 

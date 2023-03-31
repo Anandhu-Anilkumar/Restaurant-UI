@@ -68,7 +68,7 @@ for (let index = 0; index < starRating.length; index++) {
     for (let i = 0; i < 5; i++) {
         const star = document.createElement("img");
         star.classList.add("re-tile__star");
-        star.src = i < starCount ? "assets/icons/star-yellow.svg" : "assets/icons/star-grey.svg";
+        star.src = i < starCount ? "assets/icons/starred.svg" : "assets/icons/unstarred.svg";
         star.alt = "Star";
         starRating[index].appendChild(star);
     }
