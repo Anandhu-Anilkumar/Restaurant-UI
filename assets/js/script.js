@@ -58,7 +58,6 @@ $(document).ready(function () {
 });
 
 let starRating = document.getElementsByClassName("re-tile__rating");
-console.log(starRating);
 let starCount;
 
 for (let index = 0; index < starRating.length; index++) {
@@ -82,7 +81,6 @@ let serviceCTA;
 for (let index = 0; index < services.length; index++) {
     serviceCTA = services[index].getElementsByClassName("re-btn");
     if (index % 2 == 1) {
-        console.log(index);
         services[index].classList.add("re-service--alt");
         serviceCTA[0].classList.add("re-btn--alt");
     }
