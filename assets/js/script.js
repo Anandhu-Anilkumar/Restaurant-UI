@@ -99,6 +99,7 @@ let mailAddress = document.getElementById("re-email");
 let mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 let newsletterSubmit = document.getElementsByClassName("re-newsletter__btn");
 let newsletterSuccess = document.getElementsByClassName("re-newsletter__success");
+let verifiedEmail = document.querySelector(".re-newsletter__message--verified");
 
 mailAddress.addEventListener("input", function () {
 
@@ -112,5 +113,7 @@ mailAddress.addEventListener("input", function () {
 });
 
 newsletterSubmit[0].addEventListener("click", function () {
-    newsletterSuccess[0].style.display = "block";
+    console.log(mailAddress.value);
+    verifiedEmail.textContent = mailAddress.value;
+    newsletterSuccess[0].style.display = "flex";
 });

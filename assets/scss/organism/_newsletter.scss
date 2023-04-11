@@ -56,20 +56,29 @@
         margin: $spacer-3 0 0 0;
         padding: $spacer-2;
         display: none;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: $spacer-2;
+    }
+
+    &__verified {
+        color: $color-white;
+        background-color: $color-green;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 18px;
     }
 
     &__message {
+        width: calc(100% - 38px);
         font-size: 14px;
-        font-weight: $font-bold;
 
-        &::before {
-            content: '✓';
-            color: $color-white;
-            background-color: $color-green;
-            border-radius: 50%;
-            padding: $spacer-1 $spacer-2;
-            margin: 0 $spacer-2 0 0;
-            font-size: 18px;
+        &--verified {
+            font-weight: $font-bold;
         }
     }
 }

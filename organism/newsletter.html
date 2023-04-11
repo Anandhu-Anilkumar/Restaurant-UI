@@ -16,15 +16,15 @@
                 <img class="re-newsletter__image" src="../assets/images/newsletter.png" alt="Newsletter">
                 <div class="re-newsletter__content">
                     <h3 class="re-sub-heading">Subscribe to your newsletter</h3>
-                    <p class="re-description">Lorem Ipsum as their default model text, and a search for 'lorem ipsum'
-                        will uncover many web sites still in their infancy.</p>
+                    <p class="re-description">Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
                     <div class="re-newsletter__email-wrapper">
                         <input class="re-newsletter__email" type="email" placeholder="email@freshmeal.com"
                             name="re-email" id="re-email" required>
                         <button class="re-newsletter__btn" type="submit" disabled>Subscribe</button>
                     </div>
                     <div class="re-newsletter__success">
-                        <p class="re-newsletter__message">You have successfully subscribed to the newsletter!</p>
+                        <span class="re-newsletter__verified">✓</span>
+                        <p class="re-newsletter__message">You have successfully subscribed to the newsletter! Entered mail id is <span class="re-newsletter__message--verified">email@freshmeal.com</span></p>
                     </div>
                 </div>
             </div>
@@ -37,6 +37,7 @@
         let mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         let newsletterSubmit = document.getElementsByClassName("re-newsletter__btn");
         let newsletterSuccess = document.getElementsByClassName("re-newsletter__success");
+        let verifiedEmail = document.querySelector(".re-newsletter__message--verified");
 
         mailAddress.addEventListener("input", function () {
             
@@ -48,9 +49,10 @@
                 mailInputField[0].style.border = "2px solid red";
             }
         });
-
+        
         newsletterSubmit[0].addEventListener("click", function () {
-            newsletterSuccess[0].style.display = "block";
+            verifiedEmail.textContent = mailAddress.value;
+            newsletterSuccess[0].style.display = "flex";
         });
     </script>
 
